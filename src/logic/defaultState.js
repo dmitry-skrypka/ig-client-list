@@ -1,9 +1,9 @@
 
 
 const state = {
-	users_info: [],
+	clients_info: [],
 	selected: {},
-	search_results: []
+	data_to_render: []
 
 };
 

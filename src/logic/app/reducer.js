@@ -7,7 +7,9 @@ function rootReducer(state = defaultState, action) {
         case GET_CLIENTS_INFO: {
 
             return {
-
+				...state,
+				clients_info: action.payload,
+				data_to_render: action.payload
 
             };
         }
