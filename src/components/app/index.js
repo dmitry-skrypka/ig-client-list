@@ -1,12 +1,12 @@
-import React, { Fragment } from 'react';
+import React, { Fragment } from "react";
 
-import PropTypes from 'prop-types';
-import { connect } from 'react-redux';
-import { mapStateToProps, mapDispatchToProps } from './container';
-import getDataFromLocalJson from '../../helpers/getDataFromLocalJson';
-import { URL } from '../../helpers/config';
+import { connect } from "react-redux";
+import { mapStateToProps, mapDispatchToProps } from "./container";
+import getDataFromLocalJson from "../../helpers/getDataFromLocalJson";
+import { URL } from "../../helpers/config";
 import ClientList from "../list";
-
+import { InfoTab } from "../info-tab";
+import { Container } from "semantic-ui-react";
 export class App extends React.Component {
   constructor(props) {
     super(props);
@@ -16,20 +16,30 @@ export class App extends React.Component {
       this.props.getData(JSON.parse(data));
     });
   }
-
+  handleItemClick = data => {
+    this.props.onSelect(data);
+  };
   render() {
-  	const data = this.props.data_to_render
+    const data = this.props.data_to_render;
+    const selected = this.props.selected;
     return (
       <Fragment>
-        <ClientList data={data}/>
+        <Container>
+          <div>
+            <ClientList
+              data={data}
+              selected={selected}
+              onSelect={this.handleItemClick}
+            />
+            <InfoTab selected={selected} />
+          </div>
+        </Container>
       </Fragment>
     );
   }
 }
 
-App.propTypes = {};
-
 export default connect(
   mapStateToProps,
-  mapDispatchToProps,
+  mapDispatchToProps
 )(App);
