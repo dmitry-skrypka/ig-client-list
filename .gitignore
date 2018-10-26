@@ -6,6 +6,11 @@
 # testing
 /coverage
 
+# idea
+.idea/*.xml
+*.iml
+.idea
+
 # production
 /build
 
