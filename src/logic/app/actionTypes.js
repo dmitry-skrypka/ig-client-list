@@ -1,0 +1,2 @@
+export const GET_CLIENTS_INFO = 'GET_CLIENTS_INFO';
+
