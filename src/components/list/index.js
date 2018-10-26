@@ -1,7 +1,8 @@
-import React, { Fragment } from "react";
-import { List } from "semantic-ui-react";
+import React from "react";
+import { List, Icon } from "semantic-ui-react";
 import PropTypes from "prop-types";
 import { ClientItem } from "./client-item";
+
 
 export default class ClientList extends React.Component {
   render() {
@@ -15,9 +16,19 @@ export default class ClientList extends React.Component {
           onClick={this.props.onSelect}
         />
       ));
-      return <List>{clientArray}</List>;
+      return (
+        <List selection animated divided>
+          {clientArray}
+        </List>
+      );
     }
-    return <div> NOTHING</div>;
+    return (
+      <div style={{ padding: 10 }}>
+        {" "}
+        <Icon centered name="frown" />
+        Nothing Found...{" "}
+      </div>
+    );
   }
 }
 

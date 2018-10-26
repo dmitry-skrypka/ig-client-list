@@ -1,5 +1,3 @@
-
-
 export function findFromList(list, keyword) {
   return list.filter(el => search(el, keyword));
 }

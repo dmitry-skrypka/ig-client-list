@@ -8,7 +8,8 @@ import { URL } from "../../helpers/config";
 import ClientList from "../list";
 import { InfoTab } from "../info-tab";
 import { SearchInput } from "../search-input";
-import { Container } from "semantic-ui-react";
+import { Container, Grid, Header, Icon } from "semantic-ui-react";
+import { Title } from "../title";
 export class App extends React.Component {
   constructor(props) {
     super(props);
@@ -22,8 +23,7 @@ export class App extends React.Component {
     this.props.onSelect(data);
   };
 
-  handleSearchInput = (event) => {
-
+  handleSearchInput = event => {
     this.props.onInputChange(findFromList(this.props.data, event.target.value));
   };
   render() {
@@ -31,17 +31,31 @@ export class App extends React.Component {
     const selected = this.props.selected;
     return (
       <Fragment>
-        <Container>
-          <div>
-            <SearchInput onChange={this.handleSearchInput} />
-            <ClientList
-              data={data}
-              selected={selected}
-              onSelect={this.handleItemClick}
-            />
-            <InfoTab selected={selected} />
-          </div>
-        </Container>
+        {/*<Container>*/}
+        <Grid celled container>
+          <Grid.Row style={{ background: "#e7ecec" }}>
+            <Grid.Column width={5}>
+              <Title name={"Clients"} icon={"users"} />
+            </Grid.Column>
+            <Grid.Column width={11}>
+              <Title name={"Info"} icon={"info circle"} />
+            </Grid.Column>
+          </Grid.Row>
+          <Grid.Row>
+            <Grid.Column width={5}>
+              <SearchInput onChange={this.handleSearchInput} />
+              <ClientList
+                data={data}
+                selected={selected}
+                onSelect={this.handleItemClick}
+              />
+            </Grid.Column>
+            <Grid.Column width={11}>
+              <InfoTab selected={selected} />
+            </Grid.Column>
+          </Grid.Row>
+        </Grid>
+        {/*</Container>*/}
       </Fragment>
     );
   }

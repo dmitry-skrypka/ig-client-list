@@ -2,7 +2,7 @@ import React from "react";
 
 import PropTypes from "prop-types";
 
-import { Item } from "semantic-ui-react";
+import { Item, Icon } from "semantic-ui-react";
 
 export class InfoTab extends React.Component {
   constructor() {
@@ -17,7 +17,7 @@ export class InfoTab extends React.Component {
       const { city, country, street, zipCode } = this.props.selected.address;
       const { company, title } = this.props.selected.job;
       return (
-        <Item.Group>
+        <Item.Group divided>
           <Item>
             <Item.Image size="small" src={avatar} />
 
@@ -31,10 +31,17 @@ export class InfoTab extends React.Component {
                 </span>
               </Item.Meta>
 
-              <Item.Extra>email: {email}</Item.Extra>
-              <Item.Extra>phone: {phone}</Item.Extra>
+              <Item.Extra>
+                <Icon centered name="mail" /> email: {email}
+              </Item.Extra>
               <Item.Extra>
                 {" "}
+                <Icon centered name="phone square" />
+                phone: {phone}
+              </Item.Extra>
+              <Item.Extra>
+                {" "}
+                <Icon centered name="map marker alternate" />
                 {country} {city} {street} {zipCode}
               </Item.Extra>
             </Item.Content>

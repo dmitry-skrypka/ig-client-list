@@ -27,7 +27,7 @@ export class ClientItem extends React.Component {
     return (
       <List.Item
         onClick={this.handleItemClick}
-        style={{ background: selected ? "aqua" : "white" }}
+        style={{ background: selected ? "#e7ecec" : "white" }}
       >
         <Image size="mini" avatar circular src={avatar} />
 
