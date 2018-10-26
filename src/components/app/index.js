@@ -5,8 +5,9 @@ import { connect } from 'react-redux';
 import { mapStateToProps, mapDispatchToProps } from './container';
 import getDataFromLocalJson from '../../helpers/getDataFromLocalJson';
 import { URL } from '../../helpers/config';
+import ClientList from "../list";
 
-export class UserList extends React.Component {
+export class App extends React.Component {
   constructor(props) {
     super(props);
   }
@@ -17,17 +18,18 @@ export class UserList extends React.Component {
   }
 
   render() {
+  	const data = this.props.data_to_render
     return (
       <Fragment>
-        <div>Hello</div>
+        <ClientList data={data}/>
       </Fragment>
     );
   }
 }
 
-UserList.propTypes = {};
+App.propTypes = {};
 
 export default connect(
   mapStateToProps,
   mapDispatchToProps,
-)(UserList);
+)(App);
