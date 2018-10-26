@@ -1,21 +1,17 @@
-import React from "react";
+import React from 'react';
 
-import PropTypes from "prop-types";
+import PropTypes from 'prop-types';
 
-import { Item, Icon } from "semantic-ui-react";
+import { Item, Icon } from 'semantic-ui-react';
 
 export class InfoTab extends React.Component {
-  constructor() {
-    super();
-  }
-
   render() {
-    console.log(this.props);
     if (this.props.selected.general) {
-      const { avatar, firstName, lastName } = this.props.selected.general;
-      const { email, phone } = this.props.selected.contact;
-      const { city, country, street, zipCode } = this.props.selected.address;
-      const { company, title } = this.props.selected.job;
+      const
+          { avatar, firstName, lastName } = this.props.selected.general,
+          { email, phone } = this.props.selected.contact,
+          { city, country, street, zipCode } = this.props.selected.address,
+          { company, title } = this.props.selected.job;
       return (
         <Item.Group divided>
           <Item>
@@ -32,16 +28,16 @@ export class InfoTab extends React.Component {
               </Item.Meta>
 
               <Item.Extra>
-                <Icon centered name="mail" /> email: {email}
+                <Icon name="mail" /> email: {email}
               </Item.Extra>
               <Item.Extra>
-                {" "}
-                <Icon centered name="phone square" />
+                {' '}
+                <Icon name="phone square" />
                 phone: {phone}
               </Item.Extra>
               <Item.Extra>
-                {" "}
-                <Icon centered name="map marker alternate" />
+                {' '}
+                <Icon name="map marker alternate" />
                 {country} {city} {street} {zipCode}
               </Item.Extra>
             </Item.Content>
@@ -54,5 +50,5 @@ export class InfoTab extends React.Component {
   }
 }
 InfoTab.propTypes = {
-  selected: PropTypes.object
+  selected: PropTypes.object,
 };

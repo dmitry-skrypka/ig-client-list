@@ -1,9 +1,9 @@
-import defaultState from "../defaultState";
+import defaultState from '../defaultState';
 import {
   GET_CLIENTS_INFO,
   SELECTED_CLIENT_UPDATE,
-  SEARCH_UPDATE
-} from "./actionTypes";
+  DATA_TO_RENDER_UPDATE,
+} from './actionTypes';
 
 function rootReducer(state = defaultState, action) {
   switch (action.type) {
@@ -11,19 +11,19 @@ function rootReducer(state = defaultState, action) {
       return {
         ...state,
         data: action.payload,
-        data_to_render: action.payload
+        data_to_render: action.payload,
       };
     }
     case SELECTED_CLIENT_UPDATE: {
       return {
         ...state,
-        selected: action.payload
+        selected: action.payload,
       };
     }
-    case SEARCH_UPDATE: {
+    case DATA_TO_RENDER_UPDATE: {
       return {
         ...state,
-        data_to_render: action.payload
+        data_to_render: action.payload,
       };
     }
     default: {
