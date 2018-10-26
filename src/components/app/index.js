@@ -3,9 +3,11 @@ import React, { Fragment } from "react";
 import { connect } from "react-redux";
 import { mapStateToProps, mapDispatchToProps } from "./container";
 import getDataFromLocalJson from "../../helpers/getDataFromLocalJson";
+import { findFromList } from "../../helpers/searchInArray";
 import { URL } from "../../helpers/config";
 import ClientList from "../list";
 import { InfoTab } from "../info-tab";
+import { SearchInput } from "../search-input";
 import { Container } from "semantic-ui-react";
 export class App extends React.Component {
   constructor(props) {
@@ -19,6 +21,11 @@ export class App extends React.Component {
   handleItemClick = data => {
     this.props.onSelect(data);
   };
+
+  handleSearchInput = (event) => {
+
+    this.props.onInputChange(findFromList(this.props.data, event.target.value));
+  };
   render() {
     const data = this.props.data_to_render;
     const selected = this.props.selected;
@@ -26,6 +33,7 @@ export class App extends React.Component {
       <Fragment>
         <Container>
           <div>
+            <SearchInput onChange={this.handleSearchInput} />
             <ClientList
               data={data}
               selected={selected}

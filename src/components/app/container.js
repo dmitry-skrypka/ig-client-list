@@ -1,4 +1,8 @@
-import { getClientsInfo, selectedClientUpdate } from "../../logic/app/actions";
+import {
+  getClientsInfo,
+  selectedClientUpdate,
+  searchUpdate
+} from "../../logic/app/actions";
 
 export function mapStateToProps(state) {
   return {
@@ -13,6 +17,10 @@ export function mapDispatchToProps(dispatch) {
     },
     onSelect(client) {
       dispatch(selectedClientUpdate(client));
+    },
+    onInputChange(data) {
+      console.log(data);
+      dispatch(searchUpdate(data));
     }
   };
 }
