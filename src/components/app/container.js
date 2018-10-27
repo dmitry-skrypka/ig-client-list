@@ -1,12 +1,12 @@
 import {
   getClientsInfo,
   selectedClientUpdate,
-  dataUpdate,
-} from '../../logic/app/actions';
+  dataUpdate
+} from "../../logic/app/actions";
 
 export function mapStateToProps(state) {
   return {
-    ...state.app,
+    ...state.app
   };
 }
 
@@ -20,6 +20,6 @@ export function mapDispatchToProps(dispatch) {
     },
     onInputChange(data) {
       dispatch(dataUpdate(data));
-    },
+    }
   };
 }

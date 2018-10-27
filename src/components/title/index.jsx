@@ -1,7 +1,7 @@
-import React from 'react';
+import React from "react";
 
-import PropTypes from 'prop-types';
-import { Header, Icon } from 'semantic-ui-react';
+import PropTypes from "prop-types";
+import { Header, Icon } from "semantic-ui-react";
 
 export class Title extends React.Component {
   render() {
@@ -19,5 +19,5 @@ export class Title extends React.Component {
 
 Title.propTypes = {
   name: PropTypes.string,
-  icon: PropTypes.string,
+  icon: PropTypes.string
 };

@@ -1,8 +1,8 @@
-import React from 'react';
+import React from "react";
 
-import PropTypes from 'prop-types';
+import PropTypes from "prop-types";
 
-import { List, Image } from 'semantic-ui-react';
+import { List, Image } from "semantic-ui-react";
 
 export class ClientItem extends React.Component {
   handleItemClick = () => {
@@ -22,7 +22,7 @@ export class ClientItem extends React.Component {
     return (
       <List.Item
         onClick={this.handleItemClick}
-        style={{ background: selected ? '#e7ecec' : 'white' }}
+        style={{ background: selected ? "#e7ecec" : "white" }}
       >
         <Image size="mini" avatar circular src={avatar} />
 
@@ -37,5 +37,5 @@ export class ClientItem extends React.Component {
   }
 }
 ClientItem.propTypes = {
-  client: PropTypes.object,
+  client: PropTypes.object
 };

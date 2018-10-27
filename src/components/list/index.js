@@ -1,7 +1,7 @@
-import React from 'react';
-import { List, Icon } from 'semantic-ui-react';
-import PropTypes from 'prop-types';
-import { ClientItem } from './client-item';
+import React from "react";
+import { List, Icon } from "semantic-ui-react";
+import PropTypes from "prop-types";
+import { ClientItem } from "./client-item";
 
 export default class ClientList extends React.Component {
   render() {
@@ -24,7 +24,7 @@ export default class ClientList extends React.Component {
     }
     return (
       <div style={{ padding: 10 }}>
-        {' '}
+        {" "}
         <Icon name="frown" />
         Nothing found...
       </div>
@@ -33,5 +33,5 @@ export default class ClientList extends React.Component {
 }
 
 ClientList.propTypes = {
-  data: PropTypes.arrayOf(PropTypes.object),
+  data: PropTypes.arrayOf(PropTypes.object)
 };

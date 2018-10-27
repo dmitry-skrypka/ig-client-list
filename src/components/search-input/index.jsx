@@ -1,7 +1,7 @@
-import React from 'react';
+import React from "react";
 
-import PropTypes from 'prop-types';
-import { Input } from 'semantic-ui-react';
+import PropTypes from "prop-types";
+import { Input } from "semantic-ui-react";
 
 export class SearchInput extends React.Component {
   handleInput = event => {
@@ -21,5 +21,5 @@ export class SearchInput extends React.Component {
 }
 
 SearchInput.propTypes = {
-  onChange: PropTypes.func.isRequired,
+  onChange: PropTypes.func.isRequired
 };
