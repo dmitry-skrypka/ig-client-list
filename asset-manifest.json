@@ -1,14 +1,14 @@
 {
-  "main.js": "/ig-client-list/static/js/main.57b0d637.chunk.js",
-  "main.js.map": "/ig-client-list/static/js/main.57b0d637.chunk.js.map",
-  "static/css/1.d48af8c2.chunk.css": "/ig-client-list/static/css/1.d48af8c2.chunk.css",
-  "static/js/1.5597fc3d.chunk.js": "/ig-client-list/static/js/1.5597fc3d.chunk.js",
-  "static/js/1.5597fc3d.chunk.js.map": "/ig-client-list/static/js/1.5597fc3d.chunk.js.map",
+  "main.js": "/ig-client-list/static/js/main.a79babed.chunk.js",
+  "main.js.map": "/ig-client-list/static/js/main.a79babed.chunk.js.map",
+  "static/css/1.650367a5.chunk.css": "/ig-client-list/static/css/1.650367a5.chunk.css",
+  "static/js/1.d643c06d.chunk.js": "/ig-client-list/static/js/1.d643c06d.chunk.js",
+  "static/js/1.d643c06d.chunk.js.map": "/ig-client-list/static/js/1.d643c06d.chunk.js.map",
   "runtime~main.js": "/ig-client-list/static/js/runtime~main.69899183.js",
   "runtime~main.js.map": "/ig-client-list/static/js/runtime~main.69899183.js.map",
   "static/media/semantic.min.css": "/ig-client-list/static/media/brand-icons.a1a749e8.svg",
-  "static/css/1.d48af8c2.chunk.css.map": "/ig-client-list/static/css/1.d48af8c2.chunk.css.map",
+  "static/css/1.650367a5.chunk.css.map": "/ig-client-list/static/css/1.650367a5.chunk.css.map",
   "index.html": "/ig-client-list/index.html",
-  "precache-manifest.d672856f592c40cef6c1e01999081afd.js": "/ig-client-list/precache-manifest.d672856f592c40cef6c1e01999081afd.js",
+  "precache-manifest.509e1b26118925fbba58a91be522a37f.js": "/ig-client-list/precache-manifest.509e1b26118925fbba58a91be522a37f.js",
   "service-worker.js": "/ig-client-list/service-worker.js"
 }

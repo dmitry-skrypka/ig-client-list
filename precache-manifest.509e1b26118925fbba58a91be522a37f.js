@@ -4,8 +4,8 @@ self.__precacheManifest = [
     "url": "/ig-client-list/static/media/icons.faff9214.woff"
   },
   {
-    "revision": "57b0d637ff6cba691b34",
-    "url": "/ig-client-list/static/js/main.57b0d637.chunk.js"
+    "revision": "a79babeda073911adaed",
+    "url": "/ig-client-list/static/js/main.a79babed.chunk.js"
   },
   {
     "revision": "a1a749e89f578a49306ec2b055c073da",
@@ -72,15 +72,15 @@ self.__precacheManifest = [
     "url": "/ig-client-list/static/media/outline-icons.82f60bd0.svg"
   },
   {
-    "revision": "5597fc3d066ca68d4b36",
-    "url": "/ig-client-list/static/js/1.5597fc3d.chunk.js"
+    "revision": "d643c06d58cee9a84858",
+    "url": "/ig-client-list/static/js/1.d643c06d.chunk.js"
   },
   {
-    "revision": "5597fc3d066ca68d4b36",
-    "url": "/ig-client-list/static/css/1.d48af8c2.chunk.css"
+    "revision": "d643c06d58cee9a84858",
+    "url": "/ig-client-list/static/css/1.650367a5.chunk.css"
   },
   {
-    "revision": "de5336cd51f5b2427fafc0999e4f6241",
+    "revision": "f45391a5034b600c8995b4ff7dc018c0",
     "url": "/ig-client-list/index.html"
   }
 ];
